@@ -46,7 +46,7 @@ def main():
                 print(error)
         elif command.startswith("save"):
             with open(command[5:]+"\passwords.txt", "a") as f:
-                f.write(PasswordEncoder.pass_encrypt(a))
+                f.write(PasswordEncoder.pass_encrypt(a)+"\n")
                 print(f"Saved Password As " + command[5:] + "passwords.txt")
 
         elif command.startswith("open"):
