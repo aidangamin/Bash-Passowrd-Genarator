@@ -45,7 +45,7 @@ def main():
             except Exception as error:
                 print(error)
         elif command.startswith("save"):
-            with open(command[5:]+"\passwords.txt", "w") as f:
+            with open(command[5:]+"\passwords.txt", "a") as f:
                 f.write(PasswordEncoder.pass_encrypt(a))
                 print(f"Saved Password As " + command[5:] + "passwords.txt")
 
