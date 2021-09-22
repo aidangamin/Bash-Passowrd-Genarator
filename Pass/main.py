@@ -1,9 +1,16 @@
+"""
+Bash Password Genarator
+Written In Python (Isn't it so obvious?)
+
+Created By Aidan
+"""
+
+
 import random
 import pyperclip
 import sys
 import base64
 import tkinter
-from tkinter.filedialog import asksaveasfilename
 from modules.cipher import PasswordEncoder
 
 def create_pass(length:int, num:bool, low:bool, up:bool, sym:bool):
@@ -17,6 +24,8 @@ def create_pass(length:int, num:bool, low:bool, up:bool, sym:bool):
         a += "QWERTYUIOPASDFGHJKLZXCVBNM"
     if sym:
         a += "!@#$%^&*"
+    
+    
     
     for i in range(length):
         e += random.choice(a)
